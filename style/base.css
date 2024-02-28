@@ -1,0 +1,38 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+
+/* stylelint-disable selector-class-pattern */
+.jp-TopAreaText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+#jp-MainLogo svg {
+  display: none;
+}
+#jp-MainLogo {
+  background-image: url('https://noteable.edina.ac.uk/images/noteable_square_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#noteable-logo {
+  padding: 1px;
+  width: 100px;
+  height: 100%;
+}
+#notebook-type {
+  height: 100%;
+}
+#notebook-type::after {
+  content: '';
+  background-image: url('images/notebook-indicator.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 2rem;
+  display: inline-block;
+}
