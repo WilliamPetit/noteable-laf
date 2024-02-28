@@ -20,7 +20,7 @@ little or no modification depending on its design.
 To install the extension, execute:
 
 ```bash
-pip install noteable_laf
+pip install noteable-laf
 ```
 
 ## Uninstall
@@ -28,7 +28,7 @@ pip install noteable_laf
 To remove the extension, execute:
 
 ```bash
-pip uninstall noteable_laf
+pip uninstall noteable-laf
 ```
 
 ## Contributing
@@ -43,7 +43,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Change directory to the noteable_laf directory
+# Change directory to the noteable-laf directory
 # Install package in development mode
 pip install -e "."
 # Link your development version of the extension with JupyterLab
@@ -72,12 +72,12 @@ jupyter lab build --minimize=False
 ### Development uninstall
 
 ```bash
-pip uninstall noteable_laf
+pip uninstall noteable-laf
 ```
 
 In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
 command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlink named `noteable_laf` within that folder.
+folder is located. Then you can remove the symlink named `noteable-laf` within that folder.
 
 ### Testing the extension
 
