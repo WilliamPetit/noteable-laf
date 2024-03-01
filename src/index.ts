@@ -14,7 +14,6 @@ interface IMyCommand {
   command: string;
   label: string;
   caption: string;
-  icon?: string;
   action(): void;
 }
 
