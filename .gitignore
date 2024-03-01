@@ -82,6 +82,8 @@ target/
 
 # pyenv
 .python-version
+.direnv
+venv
 
 # celery beat schedule file
 celerybeat-schedule

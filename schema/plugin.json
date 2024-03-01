@@ -5,11 +5,23 @@
     "main": [
       {
         "id": "jp-mainmenu-noteable-laf",
-        "label": "Main Menu Example",
+        "label": "Noteable",
         "rank": 80,
         "items": [
           {
             "command": "noteable-laf:go2LaunchPage",
+            "args": {
+              "origin": "from the menu"
+            }
+          },
+          {
+            "command": "noteable-laf:go2Resources",
+            "args": {
+              "origin": "from the menu"
+            }
+          },
+          {
+            "command": "noteable-laf:go2HelpAndGuides",
             "args": {
               "origin": "from the menu"
             }
