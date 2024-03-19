@@ -94,7 +94,7 @@
     "outputDir": "noteable-laf/labextension",
     "schemaDir": "schema",
     "_build": {
-      "load": "static/remoteEntry.6780492b3244e756db96.js",
+      "load": "static/remoteEntry.837f7ac450ef28845ec3.js",
       "extension": "./extension",
       "style": "./style"
     }
