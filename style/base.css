@@ -24,15 +24,6 @@
   width: 100px;
   height: 100%;
 }
-#notebook-type {
-  height: 100%;
-}
-#notebook-type::after {
-  content: '';
-  background-image: url('images/notebook-indicator.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 3rem;
-  display: inline-block;
+.notebook-type {
+  margin-right: 15px;
 }

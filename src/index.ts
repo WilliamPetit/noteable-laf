@@ -10,6 +10,11 @@ import { DOMUtils } from '@jupyterlab/apputils';
 
 import { Widget } from '@lumino/widgets';
 
+import { LabIcon } from '@jupyterlab/ui-components';
+import notebookTypeIcon from '../style/notebook-type.svg';
+import { notebookInfo } from "./notebook_info";
+
+
 interface IMyCommand {
   command: string;
   label: string;
@@ -50,7 +55,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
       command: 'noteable-laf:go2HelpAndGuides',
       label: 'View Help and Guides page',
       caption: 'Open the Noteable Help and Guides page (in a new tab)',
-      action: () => window.open('help_guides')
+      action: () => window.open('/help_guides')
     });
 
     setupIcons(app);
@@ -76,10 +81,15 @@ function setupIcons(app: JupyterFrontEnd) {
   const node = document.createElement('div');
   node.setAttribute('id', 'noteable-logo-div');
 
-  const nbGraphic = document.createElement('span');
-  nbGraphic.setAttribute('id', 'notebook-type');
-  nbGraphic.textContent = '';
-  node.appendChild(nbGraphic);
+  if (notebookInfo.iconType === 'svg') {
+    const icon: LabIcon = new LabIcon({ name: 'notebook-type-icon', svgstr: notebookTypeIcon });
+    node.appendChild(icon.element({
+      className: 'notebook-type',
+      elementSize: 'xlarge',
+      title: notebookInfo.title,
+      tag: 'span',
+    }));
+  }
 
   const lpAnchor = document.createElement('a');
   lpAnchor.setAttribute('id', 'noteable_home_link');
@@ -93,7 +103,6 @@ function setupIcons(app: JupyterFrontEnd) {
     'https://noteable.edina.ac.uk/images/logo_noteable.svg'
   );
   lpAnchor.appendChild(noteableLogo);
-  node.appendChild(nbGraphic);
   node.appendChild(lpAnchor);
 
   // Create the widget
