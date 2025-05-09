@@ -78,14 +78,17 @@ function setupIcons(app: JupyterFrontEnd) {
   /*
   / Create the HTML content of the widget
   */
-  const node = document.createElement('div');
-  node.setAttribute('id', 'noteable-logo-div');
+  const node = document.createElement('section');
+  node.setAttribute('id', 'noteable-logo-section');
+  node.setAttribute('aria-label', 'notable logos');
 
   if (notebookInfo.iconType === 'svg') {
     const icon: LabIcon = new LabIcon({ name: 'notebook-type-icon', svgstr: notebookTypeIcon });
     node.appendChild(icon.element({
       className: 'notebook-type',
-      elementSize: 'xlarge',
+      height: '26px',
+      width: 'auto',
+      elementPosition: 'right',
       title: notebookInfo.title,
       tag: 'span',
     }));
